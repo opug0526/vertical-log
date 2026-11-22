@@ -1,16 +1,9 @@
-# Vertical Log v0.1
+# Vertical Log v0.2 (experimental)
 
-iPhone Safari向けの撮影・途中保存の試作版です。
+Safari向け縦動画カメラ。v0.1と同じIndexedDB `vertical-log-v1` を利用します。
 
-## 使い方
-1. HTTPSのGitHub Pagesで公開します。
-2. Safariで開き、カメラを許可します。
-3. 撮影秒数を選び、撮影ボタンを押します。
-4. 撮影後にコメントを入力して保存します。
-5. 保存済みクリップはこの端末・このブラウザのIndexedDBに保存されます。
+- 既存の撮影・コメント・途中保存
+- 連続プレビュー（時刻とコメントを中央表示）
+- Canvas + MediaRecorder による実験的な無音動画書き出し
 
-## 注意
-- 動画結合・書き出し・あんずもじ表示はまだ実装していません。
-- iPhone Safariの対応形式や実際の録画時間は実機テストが必要です。
-- Safariのサイトデータ削除やストレージ制限により動画が消える可能性があります。
-- フォントのライセンス確認後に文字焼き込みを追加します。
+注意：iOS Safariでは canvas.captureStream や MediaRecorder の組み合わせが使えず書き出せない場合があります。iPhone実機で未検証。あんずもじは未収録（代替フォント）。ブラウザデータを消すと保存動画が失われる可能性があります。既存クリップを残すため同じGitHub Pages URLで更新してください。
